@@ -1,0 +1,8 @@
+---
+- hosts: idrac
+  gather_facts: no
+  tasks:
+        - name: poweronidrac
+          raw: racadm serveraction powerup
+              
+

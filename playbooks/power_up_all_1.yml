@@ -1,0 +1,9 @@
+---
+- hosts: ipmi
+  tasks:
+        - name: Ensure machine is powered on
+          community.general.ipmi_power:
+             name: 10.0.0.231
+             user: ADMIN
+             password: ADMIN
+             state: on

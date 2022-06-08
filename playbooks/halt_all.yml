@@ -1,0 +1,7 @@
+---
+- hosts: worker
+  become: true
+  become_user: root
+  tasks:
+        - name: Halting all VM's and XenHosts
+          reboot:

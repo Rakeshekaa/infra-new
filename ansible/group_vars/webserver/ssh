@@ -1,0 +1,5 @@
+---
+ansible_connection: ssh
+ansible_user: rakesh
+ansible_ssh_pass: q1w2e3r4*
+ansible_become_pass: q1w2e3r4*

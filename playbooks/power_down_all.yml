@@ -1,0 +1,9 @@
+---
+- hosts: xen
+  tasks:
+        - name: poweroff
+          shell: | 
+            xe vm-list | fgrep 'name-label ( RW):' | awk -F: '{print $NF}' | xargs -I{} xe vm-shutdown vm={}
+            retries: 2
+          shell: |
+            poweroff

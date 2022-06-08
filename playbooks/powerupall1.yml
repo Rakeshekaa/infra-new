@@ -1,0 +1,9 @@
+---
+- hosts: ipmi
+  gather_facts: no
+  tasks:
+        - name: poweron
+          raw: start /system1/pwrmgtsvc1
+          raw: exit
+              
+

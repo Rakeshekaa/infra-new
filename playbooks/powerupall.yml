@@ -1,0 +1,10 @@
+---
+- hosts: webserver
+  tasks:
+        - name: stophttpd
+          become: yes
+          become_user: root
+          command:
+            service httpd stop
+              
+
